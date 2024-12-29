@@ -106,8 +106,8 @@ int main() {
                 common_count += word_count_1;
             }
             double p_common = double(common_count) / common_count_all;
-            p_in_0 += std::log((double)(word_count_0 + 1)/(p_common + class0.size()));
-            p_in_1 += std::log((double)(word_count_1 + 1)/(p_common + class1.size()));
+            p_in_0 += std::log(((word_count_0/class_0_word_count*1.0) + 1)/(p_common + class0.size()));
+            p_in_1 += std::log(((word_count_1/class_1_word_count*1.0) + 1)/(p_common + class1.size()));
         }
         int answer = 0;
         if (p_in_0 > p_in_1) {
